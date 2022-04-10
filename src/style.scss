@@ -1,0 +1,410 @@
+@import url('https://rsms.me/inter/inter.css');
+html {
+  font-family: 'Inter', sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter var', sans-serif;
+  }
+}
+
+button {
+  all: unset;
+}
+main {
+  all: unset;
+}
+input {
+  all: unset;
+}
+textarea {
+  all: unset;
+}
+
+.vstack {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+.hstack {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.vstack_wide {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.round_border {
+  border-radius: 5px;
+}
+
+.content_description {
+  font: 15px 'Inter';
+  font-weight: 400;
+  color: var(--g1);
+}
+
+.detail_view {
+  background: #fff;
+  padding: 5px;
+  tbody {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .left {
+    text-align: left;
+    vertical-align: top;
+    width: 120px;
+    min-width: 120px;
+    max-width: 120px;
+    font: 16px 'Inter';
+    font-weight: 500;
+  }
+  .right {
+    font: 16px 'Inter';
+    font-weight: 400;
+    line-break: anywhere;
+  }
+}
+
+.connection_maker {
+  .hide {
+    visibility: hidden;
+    display: none;
+  }
+  .show_me {
+    visibility: show;
+    display: flex;
+  }
+  .folded {
+    width: 20px;
+    max-width: 20px;
+    min-width: 20px;
+    text-align: center;
+    font: 16px 'Inter';
+    padding: 5px;
+    box-sizing: border-box;
+    line-height: 1;
+    cursor: default;
+    border-radius: 5px;
+    &:hover {
+      font-weight: 500;
+    }
+  }
+  .t_lhs {
+    background: var(--t2);
+    color: var(--t1);
+    &:hover {
+      background: var(--t2);
+    }
+  }
+  .f_lhs {
+    background: var(--f2);
+    color: var(--f1);
+    &:hover {
+      background: var(--f2);
+    }
+  }
+  .b_lhs {
+    background: var(--b2);
+    color: var(--b1);
+    &:hover {
+      background: var(--b2);
+    }
+  }
+  .selector {
+    background: var(--g2);
+  }
+}
+
+.page_selector {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  border-radius: 5px;
+  overflow: hidden;
+  .l_most {
+    border-radius: 5px 0px 0px 5px;
+  }
+  .r_most {
+    border-radius: 0px 5px 5px 0px;
+  }
+  .page_select_button {
+    font: 16px 'Inter';
+    width: 100%;
+    border: 1px solid #fff;
+    color: var(--g1);
+    background: #fff;
+    text-align: center;
+    &:hover {
+      border: 1px solid #000;
+    }
+    &:active {
+      color: #000;
+      border: 1px solid #000;
+      font-weight: 500;
+    }
+  }
+  .selected {
+    color: #000;
+    border: 1px solid #000;
+    font-weight: 500;
+  }
+}
+
+.button_set {
+  font: 16px 'Inter';
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 5px;
+  .interaction_button {
+    width: 100px;
+    border: 1px solid #fff;
+    color: var(--g1);
+    border-radius: 5px;
+    background: #fff;
+    text-align: center;
+    &:hover {
+      border: 1px solid var(--g2);
+    }
+    &:active {
+      //border: 1px solid #000;
+      color: #000;
+    }
+  }
+}
+
+.opinion {
+  .hide_me {
+    visibility: hidden;
+    display: none;
+  }
+
+  .show_me {
+    visibility: show;
+    display: flex;
+  }
+  .folded {
+    width: 20px;
+    max-width: 20px;
+    min-width: 20px;
+    text-align: center;
+    font: 16px 'Inter';
+    padding: 5px;
+    box-sizing: border-box;
+    line-height: 1;
+    cursor: default;
+    &:hover {
+      font-weight: 500;
+    }
+  }
+  .rhs_folded {
+    background: #fff;
+  }
+  .t_lhs {
+    background: var(--t2);
+    color: var(--t1);
+  }
+  .f_lhs {
+    background: var(--f2);
+    color: var(--f1);
+  }
+  .b_lhs {
+    background: var(--b2);
+    color: var(--b1);
+  }
+}
+
+.proposition {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  //width: 100%;
+  flex-grow: 1;
+  padding: 5px;
+  .display_name {
+    font: 14.5px 'Inter';
+    font-weight: 600;
+    color: #000;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .secondary_txt {
+    font: 14px 'Inter';
+    font-weight: 300;
+    color: var(--g1);
+  }
+  .op5_txt {
+    font: 14px 'Inter';
+    font-weight: 400;
+  }
+  .i_txt {
+    font: 14px 'Inter';
+    font-weight: 300;
+    color: var(--i1);
+  }
+  .id_button {
+    font: 14px 'Inter';
+    font-weight: 300;
+    color: var(--g1);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .prop_button {
+    text-decoration: underline;
+    &:hover {
+      font-weight: 500;
+    }
+  }
+  .primary_txt {
+    font: 16px 'Inter';
+    font-weight: 400;
+    color: #000;
+  }
+  .info {
+    line-height: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    justify-content: space-between;
+  }
+  .expand_area {
+    padding: 2px;
+    margin: -2px;
+    border-radius: 5px;
+  }
+  .write_src_here {
+    border: solid 1px var(--g3);
+    border-radius: 5px;
+    font: 14px 'Inter';
+    font-weight: 400;
+    padding: 0px 0px 0px 5px;
+    color: var(--g1);
+    display: flex;
+    flex-grow: 1;
+    min-width: 0px;
+  }
+  .write_prop_here {
+    border: solid 1px var(--g2);
+    border-radius: 5px;
+    font: 16px 'Inter';
+    font-weight: 400;
+    padding: 0px 5px 0px 5px;
+    display: flex;
+    flex-grow: 1;
+  }
+  .t_button {
+    font: 14px 'Inter';
+    font-weight: 400;
+    color: var(--t1);
+    &:hover {
+      background: var(--t3);
+    }
+  }
+  .f_button {
+    font: 14px 'Inter';
+    font-weight: 400;
+    color: var(--f1);
+    &:hover {
+      background: var(--f3);
+    }
+  }
+  .b_button {
+    font: 14px 'Inter';
+    font-weight: 400;
+    color: var(--b1);
+    &:hover {
+      background: var(--b3);
+    }
+  }
+  .t_bg {
+    background: var(--t3);
+  }
+  .f_bg {
+    background: var(--f3);
+  }
+  .b_bg {
+    background: var(--b3);
+  }
+  .t_txt {
+    color: var(--t1);
+  }
+  .f_txt {
+    color: var(--f1);
+  }
+  .b_txt {
+    color: var(--b1);
+  }
+}
+
+.use_tool_tip {
+  position: relative;
+  display: inline-block;
+  .tool_tip {
+    position: absolute;
+    white-space: nowrap;
+    z-index: 1;
+    background-color: #fff;
+    border: solid 1px var(--g2);
+    border-radius: 5px;
+    padding: 4px;
+    display: none;
+    visibility: hidden;
+    font: 14px 'Inter';
+    line-height: 1;
+    font-weight: 400;
+  }
+  &:hover {
+    .tool_tip {
+      display: inline;
+      visibility: visible;
+    }
+  }
+  .position_1 {
+    bottom: -140%;
+    right: -5px;
+  }
+}
+
+body {
+  --bg: #e8e5e3;
+
+  --g1: #85878a;
+  --g2: #aaaabb;
+  --g3: #ddddee;
+  --g4: #eeeef7;
+
+  --t1: #160df2;
+  --t2: #b3d4ff;
+  --t3: #d1e5ff;
+  --t4: #e7f0fd;
+
+  --f1: #ff0f5b;
+  --f2: #ff8aaf;
+  --f3: #ffc7e3;
+  --f4: #ffe5f2;
+
+  --b1: #ff5714;
+  --b2: #ffaf8f;
+  --b3: #f7d9ba;
+  --b4: #f7e5d4;
+
+  --i1: #c70fff;
+  --i2: #e7b3ff;
+  --i3: #efccff;
+  --i4: #ecd9f5;
+
+  background: var(--bg);
+}
