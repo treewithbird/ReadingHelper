@@ -19,20 +19,6 @@ export default function App() {
   return (
     <div className="temp_layout">
       <div className="temp_layout2">
-        <Argument data={data_argument} />
-        <br />
-        <br />
-        <br />
-        <Argument data={data_argument} />
-      </div>
-      <div className="temp_layout2">
-        <Argument data={data_argument} />
-        <br />
-        <br />
-        <br />
-        <Argument data={data_argument} />
-      </div>
-      <div className="temp_layout2">
         <PropositionInspection data={inspectiondata} />
       </div>
     </div>
