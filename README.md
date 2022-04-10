@@ -1,1 +1,1 @@
-# Hi!
+debatetool.com
