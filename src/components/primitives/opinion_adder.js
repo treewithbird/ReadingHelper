@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const PropositionMaker = (props) => {
   const [vote, setVote] = React.useState([true, false, false]);
@@ -6,7 +6,7 @@ const PropositionMaker = (props) => {
 
   const t_button = (
     <button
-      className={'t_button expand_area' + (vote[0] ? ' t_bg' : '')}
+      className={"t_button expand_area" + (vote[0] ? " t_bg" : "")}
       onClick={() => setVote([true, false, false])}
     >
       {vote[0] + 0}
@@ -15,7 +15,7 @@ const PropositionMaker = (props) => {
 
   const f_button = (
     <button
-      className={'f_button expand_area' + (vote[1] ? ' f_bg' : '')}
+      className={"f_button expand_area" + (vote[1] ? " f_bg" : "")}
       onClick={() => setVote([false, true, false])}
     >
       {vote[1] + 0}
@@ -24,7 +24,7 @@ const PropositionMaker = (props) => {
 
   const b_button = (
     <button
-      className={'b_button expand_area' + (vote[2] ? ' b_bg' : '')}
+      className={"b_button expand_area" + (vote[2] ? " b_bg" : "")}
       onClick={() => setVote([false, false, true])}
     >
       {vote[2] + 0}
@@ -44,7 +44,7 @@ const PropositionMaker = (props) => {
         ></input>
         <span>
           &nbsp;&nbsp;&nbsp;
-          <span className="secondary_txt">{'Vote ·'}</span>
+          <span className="secondary_txt">{"Vote ·"}</span>
           &nbsp;{t_button}&nbsp;{f_button}&nbsp;{b_button}
         </span>
       </div>
@@ -57,44 +57,50 @@ const PropositionMaker = (props) => {
 };
 
 const ConnectionMaker = (props) => {
-  const [type, setType] = React.useState(1);
+  const [type, setType] = React.useState(0);
   const [select, setSelect] = React.useState(false);
 
-  const lhs_style = [' t_lhs', ' f_lhs', ' b_lhs'][type];
-  const lhs_message = ['T', 'F', 'B'][type];
+  const lhs_style = [" t_lhs", " f_lhs", " b_lhs"][type];
+  const lhs_message = ["T", "F", "B"][type];
+
   return (
     <div className="connection_maker hstack">
-      <div className={'hstack ' + (select ? 'show_me' : 'hide')}>
+      <div className={"hstack " + (select ? "show_me" : "hide")}>
         <span
-          className={'folded t_lhs selector'}
+          className={"folded t_lhs selector"}
           onClick={() => {
             setSelect(false);
             setType(0);
           }}
         >
-          {'T'}
+          {"T"}
         </span>
         <span
-          className={'folded f_lhs selector'}
+          className={"folded f_lhs selector"}
           onClick={() => {
             setSelect(false);
             setType(1);
           }}
         >
-          {'F'}
+          {"F"}
         </span>
         <span
-          className={'folded b_lhs selector'}
+          className={"folded b_lhs selector"}
           onClick={() => {
             setSelect(false);
             setType(2);
           }}
         >
-          {'B'}
+          {"B"}
         </span>
       </div>
-      <div className={select ? 'hide' : 'show_me'}>
-        <div className={'folded' + lhs_style} onClick={() => setSelect(true)}>
+      <div className={select ? "hide" : "show_me"}>
+        <div
+          className={"folded" + lhs_style}
+          onClick={() => {
+            setSelect(true);
+          }}
+        >
           {lhs_message}
         </div>
       </div>

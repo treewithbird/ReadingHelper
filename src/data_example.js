@@ -146,7 +146,7 @@ const detaildata = {
 
   creation_date: "2021/05/23 17:49",
   creator_vote: 0,
-  source: "https://codepen.io/bugqualia/pen/QWarKQe?editors=0010",
+  source: "https://writings.stephenwolfram.com/",
 
   display_name: "Wolfram",
   id: "realwolfram",

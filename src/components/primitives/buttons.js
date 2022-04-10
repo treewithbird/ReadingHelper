@@ -65,19 +65,9 @@ const ButtonSet2 = (props) => {
   return (
     <div className="button_set">
       <button className="interaction_button">Save draft</button>
-      <button className="interaction_button">Peer review</button>
       <button className="interaction_button">Post</button>
     </div>
   );
 };
 
-const ButtonSet3 = (props) => {
-  /*TODO Watch user, unwatch user toggle TODO*/
-  return (
-    <div className="button_set">
-      <button className="interaction_button">send</button>
-    </div>
-  );
-};
-
-export { PageSelector, ButtonSet1, ButtonSet2, ButtonSet3 };
+export { PageSelector, ButtonSet1, ButtonSet2 };
