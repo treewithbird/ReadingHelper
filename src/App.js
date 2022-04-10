@@ -19,7 +19,33 @@ export default function App() {
   //<PropositionInspection data={inspectiondata} />
   return (
     <div className="temp_layout">
-      <div className="temp_layout2">Trending keywords, login, logo, etc...</div>
+      <div className="temp_layout2">
+        <div>Logo....Sign in/Sign up</div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <div>Trending keywords</div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <div>Notifications</div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <div>User info</div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <div>AD</div>
+        <br />
+        <br />
+        <br />
+        <br />
+      </div>
       <div className="temp_layout2">
         Main feed
         <br />
