@@ -1,44 +1,48 @@
-import React from 'react';
+import React from "react";
 
 const PageSelector = (props) => {
   const [page, setPage] = React.useState(0);
   return (
     <div className="page_selector">
       <button
-        className={'page_select_button l_most' + (page == 0 ? ' selected' : '')}
+        className={
+          "page_select_button l_most" + (page === 0 ? " selected" : "")
+        }
         onClick={() => {
           setPage(0);
           props.set_curr_page(0);
         }}
       >
-        {'Opinions'}
+        {"Opinions"}
       </button>
       <button
-        className={'page_select_button' + (page == 1 ? ' selected' : '')}
+        className={"page_select_button" + (page === 1 ? " selected" : "")}
         onClick={() => {
           setPage(1);
           props.set_curr_page(1);
         }}
       >
-        {'User'}
+        {"User"}
       </button>
       <button
-        className={'page_select_button' + (page == 2 ? ' selected' : '')}
+        className={"page_select_button" + (page === 2 ? " selected" : "")}
         onClick={() => {
           setPage(2);
           props.set_curr_page(2);
         }}
       >
-        {'Voters'}
+        {"Voters"}
       </button>
       <button
-        className={'page_select_button r_most' + (page == 3 ? ' selected' : '')}
+        className={
+          "page_select_button r_most" + (page === 3 ? " selected" : "")
+        }
         onClick={() => {
           setPage(3);
           props.set_curr_page(3);
         }}
       >
-        {'Mentions'}
+        {"Mentions"}
       </button>
     </div>
   );
@@ -49,7 +53,7 @@ const ButtonSet1 = (props) => {
   return (
     <div className="button_set">
       <button className="interaction_button">Report</button>
-      <button className="interaction_button">{'Watch User'}</button>
+      <button className="interaction_button">{"Watch User"}</button>
       <button className="interaction_button">Save</button>
       <button className="interaction_button">Share</button>
     </div>

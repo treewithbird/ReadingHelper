@@ -1,7 +1,7 @@
 const countStat = (tfb_history) => {
-  t_vote = tfb_history.split('').map((x) => Number(x == '0'));
-  f_vote = tfb_history.split('').map((x) => Number(x == '1'));
-  b_vote = tfb_history.split('').map((x) => Number(x == '2'));
+  let t_vote = tfb_history.split("").map((x) => Number(x === "0"));
+  let f_vote = tfb_history.split("").map((x) => Number(x === "1"));
+  let b_vote = tfb_history.split("").map((x) => Number(x === "2"));
   t_vote = t_vote.reduce(
     (a, x, i) => [...a, a.length > 0 ? x + a[i - 1] : x],
     []
@@ -15,8 +15,7 @@ const countStat = (tfb_history) => {
     []
   );
 
-  ret = [t_vote, f_vote, b_vote];
-  return ret;
+  return [t_vote, f_vote, b_vote];
 };
 
 const countChar = (string) => {
@@ -31,23 +30,23 @@ const timeSince = (date) => {
 
   let interval = seconds / 31536000;
   if (interval > 1) {
-    return Math.floor(interval) + 'y ago';
+    return Math.floor(interval) + "y ago";
   }
   interval = seconds / 2592000;
   if (interval > 1) {
-    return Math.floor(interval) + 'mo ago';
+    return Math.floor(interval) + "mo ago";
   }
   interval = seconds / 86400;
   if (interval > 1) {
-    return Math.floor(interval) + 'd ago';
+    return Math.floor(interval) + "d ago";
   }
   interval = seconds / 3600;
   if (interval > 1) {
-    return Math.floor(interval) + 'hr ago';
+    return Math.floor(interval) + "hr ago";
   }
   interval = seconds / 60;
   if (interval > 1) {
-    return Math.floor(interval) + 'min ago';
+    return Math.floor(interval) + "min ago";
   }
-  return Math.floor(seconds) + 's ago';
+  return Math.floor(seconds) + "s ago";
 };
