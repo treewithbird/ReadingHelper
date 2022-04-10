@@ -20,6 +20,14 @@ button {
 main {
   all: unset;
 }
+.temp_layout {
+  display: flex;
+  justify-content: center;
+}
+
+.temp_layout2 {
+  max-width: 600px;
+}
 
 .vstack {
   display: flex;
