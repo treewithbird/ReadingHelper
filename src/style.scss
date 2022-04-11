@@ -96,7 +96,7 @@ main {
     visibility: show;
     display: flex;
   }
-  .folded {
+  .folded_o {
     width: 20px;
     max-width: 20px;
     min-width: 20px;
@@ -111,21 +111,21 @@ main {
       font-weight: 500;
     }
   }
-  .t_lhs {
+  .t_lhs_o {
     background: var(--t2);
     color: var(--t1);
     &:hover {
       background: var(--t2);
     }
   }
-  .f_lhs {
+  .f_lhs_o {
     background: var(--f2);
     color: var(--f1);
     &:hover {
       background: var(--f2);
     }
   }
-  .b_lhs {
+  .b_lhs_o {
     background: var(--b2);
     color: var(--b1);
     &:hover {

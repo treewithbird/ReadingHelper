@@ -60,14 +60,14 @@ const ConnectionMaker = (props) => {
   const [type, setType] = React.useState(0);
   const [select, setSelect] = React.useState(false);
 
-  const lhs_style = [" t_lhs", " f_lhs", " b_lhs"][type];
+  const lhs_style = [" t_lhs_o", " f_lhs_o", " b_lhs_o"][type];
   const lhs_message = ["T", "F", "B"][type];
 
   return (
     <div className="connection_maker hstack">
       <div className={"hstack " + (select ? "show_me" : "hide")}>
         <span
-          className={"folded t_lhs selector"}
+          className={"folded_o t_lhs_o selector"}
           onClick={() => {
             setSelect(false);
             setType(0);
@@ -76,7 +76,7 @@ const ConnectionMaker = (props) => {
           {"T"}
         </span>
         <span
-          className={"folded f_lhs selector"}
+          className={"folded_o f_lhs_o selector"}
           onClick={() => {
             setSelect(false);
             setType(1);
@@ -85,7 +85,7 @@ const ConnectionMaker = (props) => {
           {"F"}
         </span>
         <span
-          className={"folded b_lhs selector"}
+          className={"folded_o b_lhs_o selector"}
           onClick={() => {
             setSelect(false);
             setType(2);
@@ -96,7 +96,7 @@ const ConnectionMaker = (props) => {
       </div>
       <div className={select ? "hide" : "show_me"}>
         <div
-          className={"folded" + lhs_style}
+          className={"folded_o " + lhs_style}
           onClick={() => {
             setSelect(true);
           }}
