@@ -17,35 +17,42 @@ import { Argument, Proposition } from "./components/primitives/argument.js";
 
 export default function App() {
   //<PropositionInspection data={inspectiondata} />
+
+  const is_horizontal = window.innerWidth / window.innerHeight > 1;
+
   return (
     <div className="temp_layout">
-      <div className="temp_layout2">
-        <div>Logo....Sign in/Sign up</div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <div>Trending keywords</div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <div>Notifications</div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <div>User info</div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <div>AD</div>
-        <br />
-        <br />
-        <br />
-        <br />
-      </div>
+      {is_horizontal ? (
+        <div className="temp_layout2">
+          <div>Logo....Sign in/Sign up</div>
+          <br />
+          <br />
+          <br />
+          <br />
+          <div>Trending keywords</div>
+          <br />
+          <br />
+          <br />
+          <br />
+          <div>Notifications</div>
+          <br />
+          <br />
+          <br />
+          <br />
+          <div>User info</div>
+          <br />
+          <br />
+          <br />
+          <br />
+          <div>AD</div>
+          <br />
+          <br />
+          <br />
+          <br />
+        </div>
+      ) : (
+        <div></div>
+      )}
       <div className="temp_layout2">
         Main feed
         <br />
@@ -54,14 +61,18 @@ export default function App() {
         <br />
         <Feed />
       </div>
-      <div className="temp_layout2">
-        Details
-        <br />
-        <br />
-        <br />
-        <br />
-        <PropositionInspection data={inspectiondata} />
-      </div>
+      {is_horizontal ? (
+        <div className="temp_layout2">
+          Details
+          <br />
+          <br />
+          <br />
+          <br />
+          <PropositionInspection data={inspectiondata} />
+        </div>
+      ) : (
+        <div></div>
+      )}
     </div>
   );
 }
