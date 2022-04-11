@@ -1,43 +1,41 @@
-import React from 'react';
+import React from "react";
 
-const get_display_sentence = (content) => {
+const get_display_sentence = (content, toggle_highlight) => {
   if (content.sentence !== undefined) {
     return content.sentence;
   } else {
-    const message = ['True', 'False', 'Bad'][content.connects[2]];
-    const txt_color = ['t_txt', 'f_txt', 'b_txt'][content.connects[2]];
+    const message = ["True", "False", "Bad"][content.connects[2]];
+    const txt_color = ["t_txt", "f_txt", "b_txt"][content.connects[2]];
     const button1 = (
       <button
         className="prop_button"
-        onClick={() => {
-          /*TODO*/
-        }}
+        onClick={() => {}}
         onMouseEnter={() => {
-          /*TODO*/
+          toggle_highlight(content.connects[0], 0);
         }}
         onMouseLeave={() => {
-          /*TODO*/
+          toggle_highlight(content.connects[0], 0);
         }}
       >
-        {'#' + content.connects[0]}
+        {"#" + content.connects[0]}
       </button>
     );
-    const txt1 = <span>{' Shows that '}</span>;
+    const txt1 = <span>{" Shows that "}</span>;
     const button2 = (
       <button
         className="prop_button"
         onClick={() => {}}
         onMouseEnter={() => {
-          /*TODO*/
+          toggle_highlight(content.connects[1], 1);
         }}
         onMouseLeave={() => {
-          /*TODO*/
+          toggle_highlight(content.connects[1], 1);
         }}
       >
-        {'#' + content.connects[1]}
+        {"#" + content.connects[1]}
       </button>
     );
-    const txt2 = <span>{' is '}</span>;
+    const txt2 = <span>{" is "}</span>;
     const txt3 = <span className={txt_color}>{message}</span>;
 
     return (
@@ -56,6 +54,7 @@ const Proposition = (props) => {
   const [data, setData] = React.useState(props.data);
   const [voted, setVoted] = React.useState(props.data.voted);
   const [background, setBackground] = React.useState(props.bg);
+  const [highlight, set_highlight] = React.useState([false, false]);
 
   const viewer_vote_updater = (v) => {
     let tmp = voted.map((d, i) => !d && v[i]);
@@ -63,16 +62,26 @@ const Proposition = (props) => {
     /*TODO*/
   };
 
-  let display_sentence = get_display_sentence(data.content);
+  const toggle_highlight = (p_id, x) => {
+    let elements = document.getElementsByClassName(p_id + "");
+    highlight[x] = !highlight[x];
+    set_highlight(highlight);
+    for (let i = 0; i < elements.length; i++) {
+      elements[i].style.border = highlight[x] ? "1px solid var(--i1)" : "none";
+      elements[i].style.padding = highlight[x] ? "4px" : "5px";
+    }
+  };
+
+  let display_sentence = get_display_sentence(data.content, toggle_highlight);
 
   const watchers =
     data.watch === undefined ? null : (
-      <button className="i_txt">&nbsp;{'👀' + data.watch}</button>
+      <button className="i_txt">&nbsp;{"👀" + data.watch}</button>
     );
 
   const t_button = (
     <button
-      className={'t_button expand_area' + (voted[0] ? ' t_bg' : '')}
+      className={"t_button expand_area" + (voted[0] ? " t_bg" : "")}
       onClick={() => viewer_vote_updater([true, false, false])}
     >
       {data.tfb[0] + data.voted[0]}
@@ -81,7 +90,7 @@ const Proposition = (props) => {
 
   const f_button = (
     <button
-      className={'f_button expand_area' + (voted[1] ? ' f_bg' : '')}
+      className={"f_button expand_area" + (voted[1] ? " f_bg" : "")}
       onClick={() => viewer_vote_updater([false, true, false])}
     >
       {data.tfb[1] + data.voted[1]}
@@ -90,7 +99,7 @@ const Proposition = (props) => {
 
   const b_button = (
     <button
-      className={'b_button expand_area' + (voted[2] ? ' b_bg' : '')}
+      className={"b_button expand_area" + (voted[2] ? " b_bg" : "")}
       onClick={() => viewer_vote_updater([false, false, true])}
     >
       {data.tfb[2] + data.voted[2]}
@@ -98,7 +107,10 @@ const Proposition = (props) => {
   );
 
   return (
-    <div className="proposition" style={{ background: background }}>
+    <div
+      className={"proposition " + data.post_id}
+      style={{ background: background }}
+    >
       <div className="info">
         <span>
           <button
@@ -117,10 +129,10 @@ const Proposition = (props) => {
               /*TODO*/
             }}
           >
-            {'#' + data.post_id}
+            {"#" + data.post_id}
           </button>
           &nbsp;
-          <span className="secondary_txt">{'·'}</span>
+          <span className="secondary_txt">{"·"}</span>
           &nbsp;
           <span className="use_tool_tip">
             <span className="secondary_txt">{data.post_date}</span>
@@ -128,12 +140,12 @@ const Proposition = (props) => {
           </span>
         </span>
         <span className="use_tool_tip">
-          <span className="secondary_txt">{'Vote ·'}</span>
+          <span className="secondary_txt">{"Vote ·"}</span>
           &nbsp;{t_button}&nbsp;{f_button}&nbsp;{b_button}
           <span className="tool_tip position_1">
-            {'True:'}
-            {t_button}&nbsp;&nbsp;{'False:'}
-            {f_button}&nbsp;&nbsp;{'Bad:'}
+            {"True:"}
+            {t_button}&nbsp;&nbsp;{"False:"}
+            {f_button}&nbsp;&nbsp;{"Bad:"}
             {b_button}
           </span>
         </span>
@@ -147,16 +159,16 @@ const Opinion = (props) => {
   const [lhs_expanded, set_lhs_expanded] = React.useState(false);
 
   const tmp = props.data.lhs.content.connects[2];
-  const lhs_style = [' t_lhs', ' f_lhs', ' b_lhs'][tmp];
-  const lhs_bg = ['var(--t3)', ' var(--f3)', ' var(--b3)'][tmp];
-  const lhs_message = ['T', 'F', 'B'][tmp];
+  const lhs_style = ["t_lhs", "f_lhs", "b_lhs"][tmp];
+  const lhs_bg = ["var(--t3)", " var(--f3)", " var(--b3)"][tmp];
+  const lhs_message = ["T", "F", "B"][tmp];
   const lhs = <Proposition data={props.data.lhs} bg={lhs_bg} />;
 
-  const rhs = <Proposition data={props.data.rhs} bg={'#fff'} />;
+  const rhs = <Proposition data={props.data.rhs} bg={"#fff"} />;
 
   const lhs_folded = (
     <div
-      className={'lhs_folded folded' + lhs_style}
+      className={`lhs_folded folded ${lhs_style} ${props.data.lhs.post_id}`}
       onClick={() => set_lhs_expanded(true)}
     >
       {lhs_message}
@@ -164,8 +176,11 @@ const Opinion = (props) => {
   );
 
   const rhs_folded = (
-    <div className="rhs_folded folded" onClick={() => set_lhs_expanded(false)}>
-      {'<'}
+    <div
+      className={`rhs_folded folded ${props.data.rhs.post_id}`}
+      onClick={() => set_lhs_expanded(false)}
+    >
+      {"<"}
     </div>
   );
 
@@ -179,14 +194,14 @@ const Opinion = (props) => {
 
   return (
     <div className="opinion">
-      <div className={'hstack ' + (lhs_expanded ? 'hide_me' : 'show_me')}>
+      <div className={"hstack " + (lhs_expanded ? "hide_me" : "show_me")}>
         {lhs_folded}
         <div className="vstack">
           {rhs}
           {subopinions_r}
         </div>
       </div>
-      <div className={'hstack ' + (lhs_expanded ? 'show_me' : 'hide_me')}>
+      <div className={"hstack " + (lhs_expanded ? "show_me" : "hide_me")}>
         <div className="vstack">
           {lhs}
           {subopinions_l}
@@ -213,13 +228,13 @@ const Argument = (props) => {
 const VoteView = (props) => {
   const watchers =
     props.data.watch === undefined ? null : (
-      <button className="i_txt">&nbsp;{'👀' + props.data.watch}</button>
+      <button className="i_txt">&nbsp;{"👀" + props.data.watch}</button>
     );
 
-  const tfb_color = ['var(--t1)', 'var(--f1)', 'var(--b1)'][props.data.vote];
+  const tfb_color = ["var(--t1)", "var(--f1)", "var(--b1)"][props.data.vote];
 
   return (
-    <div className="proposition" style={{ background: '#fff' }}>
+    <div className="proposition" style={{ background: "#fff" }}>
       <div className="info">
         <span>
           <button
@@ -233,16 +248,16 @@ const VoteView = (props) => {
           {watchers}&nbsp;&nbsp;
           <div
             className="op5_txt"
-            style={{ display: 'inline-block', color: '#000' }}
+            style={{ display: "inline-block", color: "#000" }}
           >
-            {'Voted '}
+            {"Voted "}
           </div>
           &nbsp;&nbsp;
           <div
             className="op5_txt"
-            style={{ display: 'inline-block', color: tfb_color }}
+            style={{ display: "inline-block", color: tfb_color }}
           >
-            {['True', 'False', 'Bad'][props.data.vote]}
+            {["True", "False", "Bad"][props.data.vote]}
           </div>
           &nbsp;&nbsp;
           <span className="use_tool_tip">
