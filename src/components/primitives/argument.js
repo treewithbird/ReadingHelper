@@ -1,4 +1,5 @@
 import React from "react";
+import { PropositionMaker, ConnectionMaker } from "./opinion_adder.js";
 
 const get_display_sentence = (content, toggle_highlight) => {
   if (content.sentence !== undefined) {
@@ -55,6 +56,7 @@ const Proposition = (props) => {
   const [voted, setVoted] = React.useState(props.data.voted);
   const [background, setBackground] = React.useState(props.bg);
   const [highlight, set_highlight] = React.useState([false, false]);
+  const [writemode, setWritemode] = React.useState(false);
 
   const viewer_vote_updater = (v) => {
     let tmp = voted.map((d, i) => !d && v[i]);
@@ -107,50 +109,54 @@ const Proposition = (props) => {
   );
 
   return (
-    <div
-      className={"proposition " + data.post_id}
-      style={{ background: background }}
-    >
-      <div className="info">
-        <span>
-          <button
-            className="display_name"
-            onClick={() => {
-              /*TODO*/
-            }}
-          >
-            {data.display_name}
-          </button>
-          {watchers}
-          &nbsp;
-          <button
-            className="id_button"
-            onClick={() => {
-              /*TODO*/
-            }}
-          >
-            {"#" + data.post_id}
-          </button>
-          &nbsp;
-          <span className="secondary_txt">{"·"}</span>
-          &nbsp;
+    <div className="vstack">
+      <div
+        className={"proposition " + data.post_id}
+        style={{ background: background }}
+        onClick={() => setWritemode(!writemode)}
+      >
+        <div className="info">
+          <span>
+            <button
+              className="display_name"
+              onClick={() => {
+                /*TODO*/
+              }}
+            >
+              {data.display_name}
+            </button>
+            {watchers}
+            &nbsp;
+            <button
+              className="id_button"
+              onClick={() => {
+                /*TODO*/
+              }}
+            >
+              {"#" + data.post_id}
+            </button>
+            &nbsp;
+            <span className="secondary_txt">{"·"}</span>
+            &nbsp;
+            <span className="use_tool_tip">
+              <span className="secondary_txt">{data.post_date}</span>
+              <span className="tool_tip position_1">{data.post_date}</span>
+            </span>
+          </span>
           <span className="use_tool_tip">
-            <span className="secondary_txt">{data.post_date}</span>
-            <span className="tool_tip position_1">{data.post_date}</span>
+            <span className="secondary_txt">{"Vote ·"}</span>
+            &nbsp;{t_button}&nbsp;{f_button}&nbsp;{b_button}
+            <span className="tool_tip position_1">
+              {"True:"}
+              {t_button}&nbsp;&nbsp;{"False:"}
+              {f_button}&nbsp;&nbsp;{"Bad:"}
+              {b_button}
+            </span>
           </span>
-        </span>
-        <span className="use_tool_tip">
-          <span className="secondary_txt">{"Vote ·"}</span>
-          &nbsp;{t_button}&nbsp;{f_button}&nbsp;{b_button}
-          <span className="tool_tip position_1">
-            {"True:"}
-            {t_button}&nbsp;&nbsp;{"False:"}
-            {f_button}&nbsp;&nbsp;{"Bad:"}
-            {b_button}
-          </span>
-        </span>
+        </div>
+        <div className="primary_txt">{display_sentence}</div>
       </div>
-      <div className="primary_txt">{display_sentence}</div>
+      {writemode ? <ConnectionMaker /> : null}
     </div>
   );
 };

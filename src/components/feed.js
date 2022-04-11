@@ -31,6 +31,7 @@ const Contents = (props) => {
           <br />
           <div className={"content_description"}>Argument</div>
           <Argument data={o} />
+          <ConnectionMaker />
         </div>
       ))}
     </div>
