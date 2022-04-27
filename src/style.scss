@@ -39,24 +39,24 @@ main {
 .vstack {
   display: flex;
   flex-direction: column;
-  gap: 0.312rem;
+  gap: 5px;
   width: 100%;
 }
 
 .hstack {
   display: flex;
   flex-direction: row;
-  gap: 0.312rem;
+  gap: 5px;
 }
 
 .vstack_wide {
   display: flex;
   flex-direction: column;
-  gap: 3.12rem;
+  gap: 50px;
 }
 
 .round_border {
-  border-radius: 0.312rem;
+  border-radius: 5px;
 }
 
 .content_description {
@@ -67,7 +67,7 @@ main {
 
 .detail_view {
   background: #fff;
-  padding: 0.312rem;
+  padding: 5px;
   tbody {
     display: flex;
     flex-direction: column;
@@ -105,11 +105,11 @@ main {
     min-width: 1.25rem;
     text-align: center;
     font: 1rem 'Inter';
-    padding: 0.312rem;
+    padding: 5px;
     box-sizing: border-box;
     line-height: 1;
     cursor: default;
-    border-radius: 0.312rem;
+    border-radius: 5px;
     &:hover {
       font-weight: 500;
     }
@@ -144,13 +144,13 @@ main {
   display: flex;
   flex-direction: row;
   gap: 2px;
-  border-radius: 0.312rem;
+  border-radius: 5px;
   overflow: hidden;
   .l_most {
-    border-radius: 0.312rem 0rem 0rem 0.312rem;
+    border-radius: 5px 0px 0px 5px;
   }
   .r_most {
-    border-radius: 0rem 0.312rem 0.312rem 0rem;
+    border-radius: 0px 5px 5px 0px;
   }
   .page_select_button {
     font: 1rem 'Inter';
@@ -181,12 +181,12 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  gap: 0.312rem;
+  gap: 5px;
   .interaction_button {
     width: 6.25rem;
     border: 1px solid #fff;
     color: var(--g1);
-    border-radius: 0.312rem;
+    border-radius: 5px;
     background: #fff;
     text-align: center;
     &:hover {
@@ -215,7 +215,7 @@ main {
     min-width: 1.25rem;
     text-align: center;
     font: 1rem 'Inter';
-    padding: 0.312rem;
+    padding: 5px;
     box-sizing: border-box;
     line-height: 1;
     cursor: default;
@@ -243,10 +243,10 @@ main {
 .proposition {
   display: flex;
   flex-direction: column;
-  gap: 0.312rem;
+  gap: 5px;
   //width: 100%;
   flex-grow: 1;
-  padding: 0.312rem;
+  padding: 5px;
   .display_name {
     font: 0.9rem'Inter';
     font-weight: 600;
@@ -295,17 +295,23 @@ main {
     gap: 0.1875rem;
     justify-content: space-between;
   }
+  .info_1{
+    white-space: nowrap;
+  }
+  .info_2{
+    white-space: nowrap;
+  }
   .expand_area {
-    padding: 0.125rem;
-    margin: -0.125rem;
-    border-radius: 0.312rem;
+    padding: 2px;
+    margin: -2px;
+    border-radius: 5px;
   }
   .write_src_here {
     border: solid 1px var(--g3);
-    border-radius: 0.312rem;
+    border-radius: 5px;
     font: 0.9rem 'Inter';
     font-weight: 400;
-    padding: 0rem 0rem 0rem 0.312rem;
+    padding: 0px 0px 0px 5px;
     color: var(--g1);
     display: flex;
     flex-grow: 1;
@@ -313,10 +319,10 @@ main {
   }
   .write_prop_here {
     border: solid 1px var(--g2);
-    border-radius: 0.312rem;
+    border-radius: 5px;
     font: 1rem 'Inter';
     font-weight: 400;
-    padding: 0rem 0.312rem 0rem 0.312rem;
+    padding: 0px 5px 0px 5px;
     display: flex;
     flex-grow: 1;
   }
@@ -373,8 +379,8 @@ main {
     z-index: 1;
     background-color: #fff;
     border: solid 1px var(--g2);
-    border-radius: 0.312rem;
-    padding: 0.25rem;
+    border-radius: 5px;;
+    padding: 4px;
     display: none;
     visibility: hidden;
     font: 0.9rem 'Inter';
@@ -388,8 +394,8 @@ main {
     }
   }
   .position_1 {
-    bottom: -140%;
-    right: -0.312rem;
+    bottom: -170%;
+    right: -5px;;
   }
 }
 

@@ -125,7 +125,7 @@ const Proposition = (props) => {
         onClick={() => setWritemode(!writemode)}
       >
         <div className="info">
-          <span>
+          <span className="info_1">
             <button
               className="display_name"
               onClick={() => {
@@ -152,7 +152,7 @@ const Proposition = (props) => {
               <span className="tool_tip position_1">{data.post_date}</span>
             </span>
           </span>
-          <span className="use_tool_tip">
+          <span className="use_tool_tip info_2">
             <span className="secondary_txt">{"Vote ·"}</span>
             &nbsp;{t_button}&nbsp;{f_button}&nbsp;{b_button}
             <span className="tool_tip position_1">
