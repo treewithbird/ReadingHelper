@@ -35,52 +35,52 @@ main {
 .vstack {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 0.312rem;
   width: 100%;
 }
 
 .hstack {
   display: flex;
   flex-direction: row;
-  gap: 5px;
+  gap: 0.312rem;
 }
 
 .vstack_wide {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 3.12rem;
 }
 
 .round_border {
-  border-radius: 5px;
+  border-radius: 0.312rem;
 }
 
 .content_description {
-  font: 15px 'Inter';
+  font: 0.936rem 'Inter';
   font-weight: 400;
   color: var(--g1);
 }
 
 .detail_view {
   background: #fff;
-  padding: 5px;
+  padding: 0.312rem;
   tbody {
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 10px;
+    gap: 0.624rem;
   }
   .left {
     text-align: left;
     vertical-align: top;
-    width: 120px;
-    min-width: 120px;
-    max-width: 120px;
-    font: 16px 'Inter';
+    width: 7.5rem;
+    min-width: 7.5rem;
+    max-width: 7.5rem;
+    font: 1rem 'Inter';
     font-weight: 500;
   }
   .right {
-    font: 16px 'Inter';
+    font: 1rem 'Inter';
     font-weight: 400;
     line-break: anywhere;
   }
@@ -96,16 +96,16 @@ main {
     display: flex;
   }
   .folded_o {
-    width: 20px;
-    max-width: 20px;
-    min-width: 20px;
+    width: 1.25rem;
+    max-width: 1.25rem;
+    min-width: 1.25rem;
     text-align: center;
-    font: 16px 'Inter';
-    padding: 5px;
+    font: 1rem 'Inter';
+    padding: 0.312rem;
     box-sizing: border-box;
     line-height: 1;
     cursor: default;
-    border-radius: 5px;
+    border-radius: 0.312rem;
     &:hover {
       font-weight: 500;
     }
@@ -140,16 +140,16 @@ main {
   display: flex;
   flex-direction: row;
   gap: 2px;
-  border-radius: 5px;
+  border-radius: 0.312rem;
   overflow: hidden;
   .l_most {
-    border-radius: 5px 0px 0px 5px;
+    border-radius: 0.312rem 0rem 0rem 0.312rem;
   }
   .r_most {
-    border-radius: 0px 5px 5px 0px;
+    border-radius: 0rem 0.312rem 0.312rem 0rem;
   }
   .page_select_button {
-    font: 16px 'Inter';
+    font: 1rem 'Inter';
     width: 100%;
     border: 1px solid #fff;
     color: var(--g1);
@@ -172,17 +172,17 @@ main {
 }
 
 .button_set {
-  font: 16px 'Inter';
+  font: 1rem 'Inter';
   background: transparent;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  gap: 5px;
+  gap: 0.312rem;
   .interaction_button {
-    width: 100px;
+    width: 6.25rem;
     border: 1px solid #fff;
     color: var(--g1);
-    border-radius: 5px;
+    border-radius: 0.312rem;
     background: #fff;
     text-align: center;
     &:hover {
@@ -206,12 +206,12 @@ main {
     display: flex;
   }
   .folded {
-    width: 20px;
-    max-width: 20px;
-    min-width: 20px;
+    width: 1.25rem;
+    max-width: 1.25rem;
+    min-width: 1.25rem;
     text-align: center;
-    font: 16px 'Inter';
-    padding: 5px;
+    font: 1rem 'Inter';
+    padding: 0.312rem;
     box-sizing: border-box;
     line-height: 1;
     cursor: default;
@@ -239,12 +239,12 @@ main {
 .proposition {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 0.312rem;
   //width: 100%;
   flex-grow: 1;
-  padding: 5px;
+  padding: 0.312rem;
   .display_name {
-    font: 14.5px 'Inter';
+    font: 0.9rem'Inter';
     font-weight: 600;
     color: #000;
     &:hover {
@@ -252,16 +252,16 @@ main {
     }
   }
   .secondary_txt {
-    font: 14px 'Inter';
+    font: 0.9rem 'Inter';
     font-weight: 300;
     color: var(--g1);
   }
   .op5_txt {
-    font: 14px 'Inter';
+    font: 0.9rem 'Inter';
     font-weight: 400;
   }
   .id_button {
-    font: 14px 'Inter';
+    font: 0.9rem 'Inter';
     font-weight: 300;
     color: var(--g1);
     &:hover {
@@ -269,7 +269,7 @@ main {
     }
   }
   .watching{
-    font: 14px 'Inter';
+    font: 0.9rem 'Inter';
     font-weight: 500;
     color: var(--i1);
   }
@@ -280,7 +280,7 @@ main {
     }
   }
   .primary_txt {
-    font: 16px 'Inter';
+    font: 1rem 'Inter';
     font-weight: 400;
     color: #000;
   }
@@ -288,36 +288,36 @@ main {
     line-height: 1;
     display: flex;
     flex-direction: row;
-    gap: 3px;
+    gap: 0.1875rem;
     justify-content: space-between;
   }
   .expand_area {
-    padding: 2px;
-    margin: -2px;
-    border-radius: 5px;
+    padding: 0.125rem;
+    margin: -0.125rem;
+    border-radius: 0.312rem;
   }
   .write_src_here {
     border: solid 1px var(--g3);
-    border-radius: 5px;
-    font: 14px 'Inter';
+    border-radius: 0.312rem;
+    font: 0.9rem 'Inter';
     font-weight: 400;
-    padding: 0px 0px 0px 5px;
+    padding: 0rem 0rem 0rem 0.312rem;
     color: var(--g1);
     display: flex;
     flex-grow: 1;
-    min-width: 0px;
+    min-width: 0rem;
   }
   .write_prop_here {
     border: solid 1px var(--g2);
-    border-radius: 5px;
-    font: 16px 'Inter';
+    border-radius: 0.312rem;
+    font: 1rem 'Inter';
     font-weight: 400;
-    padding: 0px 5px 0px 5px;
+    padding: 0rem 0.312rem 0rem 0.312rem;
     display: flex;
     flex-grow: 1;
   }
   .t_button {
-    font: 14px 'Inter';
+    font: 0.9rem 'Inter';
     font-weight: 400;
     color: var(--t1);
     &:hover {
@@ -325,7 +325,7 @@ main {
     }
   }
   .f_button {
-    font: 14px 'Inter';
+    font: 0.9rem 'Inter';
     font-weight: 400;
     color: var(--f1);
     &:hover {
@@ -333,7 +333,7 @@ main {
     }
   }
   .b_button {
-    font: 14px 'Inter';
+    font: 0.9rem 'Inter';
     font-weight: 400;
     color: var(--b1);
     &:hover {
@@ -369,11 +369,11 @@ main {
     z-index: 1;
     background-color: #fff;
     border: solid 1px var(--g2);
-    border-radius: 5px;
-    padding: 4px;
+    border-radius: 0.312rem;
+    padding: 0.25rem;
     display: none;
     visibility: hidden;
-    font: 14px 'Inter';
+    font: 0.9rem 'Inter';
     line-height: 1;
     font-weight: 400;
   }
@@ -385,7 +385,7 @@ main {
   }
   .position_1 {
     bottom: -140%;
-    right: -5px;
+    right: -0.312rem;
   }
 }
 

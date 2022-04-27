@@ -50,9 +50,7 @@ export default function App() {
           <br />
           <br />
         </div>
-      ) : (
-        <div></div>
-      )}
+      ) : null}
       <div className="temp_layout2">
         Main feed
         <br />
@@ -70,9 +68,7 @@ export default function App() {
           <br />
           <PropositionInspection data={inspectiondata} />
         </div>
-      ) : (
-        <div></div>
-      )}
+      ) : null}
     </div>
   );
 }
