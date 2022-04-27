@@ -51,7 +51,7 @@ export default function App() {
           <br />
         </div>
       ) : null}
-      <div className="temp_layout2">
+      <div className="temp_layout3">
         Main feed
         <br />
         <br />

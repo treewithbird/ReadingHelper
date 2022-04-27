@@ -32,6 +32,10 @@ main {
   max-width: 600px;
 }
 
+.temp_layout3 {
+  width: calc(100% - 2rem)
+}
+
 .vstack {
   display: flex;
   flex-direction: column;
