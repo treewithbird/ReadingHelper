@@ -58,7 +58,8 @@ const Proposition = (props) => {
   const [highlight, set_highlight] = React.useState([false, false]);
   const [writemode, setWritemode] = React.useState(false);
 
-  const viewer_vote_updater = (v) => {
+  const viewer_vote_updater = (e, v) => {
+    e.stopPropagation();
     let tmp = voted.map((d, i) => !d && v[i]);
     setVoted(tmp);
     /*TODO*/
@@ -78,33 +79,41 @@ const Proposition = (props) => {
 
   const watchers =
     data.watch === undefined ? null : (
-      <button className="i_txt">&nbsp;{"👀" + data.watch}</button>
+      <>
+        &nbsp;
+        <button
+          className="watching"
+          title={`${data.watch} watchers including you.`}
+        >
+          {"(" + data.watch + ")"}
+        </button>
+      </>
     );
 
   const t_button = (
     <button
       className={"t_button expand_area" + (voted[0] ? " t_bg" : "")}
-      onClick={() => viewer_vote_updater([true, false, false])}
+      onClick={(e) => viewer_vote_updater(e, [true, false, false])}
     >
-      {data.tfb[0] + data.voted[0]}
+      {data.tfb[0] + voted[0]}
     </button>
   );
 
   const f_button = (
     <button
       className={"f_button expand_area" + (voted[1] ? " f_bg" : "")}
-      onClick={() => viewer_vote_updater([false, true, false])}
+      onClick={(e) => viewer_vote_updater(e, [false, true, false])}
     >
-      {data.tfb[1] + data.voted[1]}
+      {data.tfb[1] + voted[1]}
     </button>
   );
 
   const b_button = (
     <button
       className={"b_button expand_area" + (voted[2] ? " b_bg" : "")}
-      onClick={() => viewer_vote_updater([false, false, true])}
+      onClick={(e) => viewer_vote_updater(e, [false, false, true])}
     >
-      {data.tfb[2] + data.voted[2]}
+      {data.tfb[2] + voted[2]}
     </button>
   );
 

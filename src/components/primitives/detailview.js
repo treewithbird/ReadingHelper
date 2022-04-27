@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-const Ttxt = (props) => <span style={{ color: 'var(--t1)' }}>{props.t}</span>;
-const Ftxt = (props) => <span style={{ color: 'var(--f1)' }}>{props.t}</span>;
-const Btxt = (props) => <span style={{ color: 'var(--b1)' }}>{props.t}</span>;
-const Itxt = (props) => <span style={{ color: 'var(--i1)' }}>{props.t}</span>;
+const Ttxt = (props) => <span style={{ color: "var(--t1)" }}>{props.t}</span>;
+const Ftxt = (props) => <span style={{ color: "var(--f1)" }}>{props.t}</span>;
+const Btxt = (props) => <span style={{ color: "var(--b1)" }}>{props.t}</span>;
+const Itxt = (props) => <span style={{ color: "var(--i1)" }}>{props.t}</span>;
 
 const countChar = (string) => {
   return [...string].reduce(
@@ -58,11 +58,11 @@ const DetailView2 = (props) => {
         <tbody>
           <tr className="pair">
             <th className="left">Vote timeline</th>
-            <td className="right">{'TODO'}</td>
+            <td className="right">{"TODO"}</td>
           </tr>
           <tr className="pair">
             <th className="left">Pie chart</th>
-            <td className="right">{'TODO'}</td>
+            <td className="right">{"TODO"}</td>
           </tr>
           <tr className="pair">
             <th className="left">Vote count</th>
@@ -79,9 +79,9 @@ const DetailView2 = (props) => {
             <th className="left">Impact</th>
             <td className="right">
               <Ttxt t={tfb[0]} />
-              {'+'}
+              {"+"}
               <Ftxt t={tfb[1]} />
-              {'-'}
+              {"-"}
               <Btxt t={tfb[2]} />
               {` = ${impact}`}
             </td>
@@ -90,9 +90,9 @@ const DetailView2 = (props) => {
             <th className="left">Truthiness</th>
             <td className="right">
               <Ttxt t={tfb[0]} />
-              {'/('}
+              {"/("}
               <Ttxt t={tfb[0]} />
-              {'+'}
+              {"+"}
               <Ftxt t={tfb[1]} />
               {`) => ${truthiness}%`}
             </td>
@@ -100,15 +100,15 @@ const DetailView2 = (props) => {
           <tr className="pair">
             <th className="left">Quality</th>
             <td className="right">
-              {'('}
+              {"("}
               <Ttxt t={tfb[0]} />
-              {'+'}
+              {"+"}
               <Ftxt t={tfb[1]} />
-              {')/('}
+              {")/("}
               <Ttxt t={tfb[0]} />
-              {'+'}
+              {"+"}
               <Ftxt t={tfb[1]} />
-              {'+'}
+              {"+"}
               <Btxt t={tfb[2]} />
               {`) => ${quality}%`}
             </td>
@@ -135,7 +135,7 @@ const DetailView3 = (props) => {
           <tr className="pair">
             <th className="left">Watchers</th>
             <td className="right">
-              {'👀'}
+              {"👀"}
               <Itxt t={props.data.watchers} />
             </td>
           </tr>
@@ -144,7 +144,7 @@ const DetailView3 = (props) => {
             <td className="right">{props.data.contributions}</td>
           </tr>
           <tr className="pair">
-            <th className="left">Given TFB</th>
+            <th className="left">Votes given</th>
             <td className="right">
               True:
               <Ttxt t={props.data.given_tfb[0]} />
@@ -155,7 +155,7 @@ const DetailView3 = (props) => {
             </td>
           </tr>
           <tr className="pair">
-            <th className="left">Gotten TFB</th>
+            <th className="left">Votes gotten</th>
             <td className="right">
               True:
               <Ttxt t={props.data.gotten_tfb[0]} />
@@ -167,7 +167,7 @@ const DetailView3 = (props) => {
           </tr>
           <tr className="pair">
             <th className="left"></th>
-            <td className="right">{'TODO'}</td>
+            <td className="right">{"TODO"}</td>
           </tr>
           <tr className="pair">
             <th className="left">Signup date</th>
@@ -179,7 +179,7 @@ const DetailView3 = (props) => {
           </tr>
           <tr className="pair">
             <th className="left"></th>
-            <td className="right">{'TODO'}</td>
+            <td className="right">{"TODO"}</td>
           </tr>
           <tr className="pair">
             <th className="left">Last visit</th>

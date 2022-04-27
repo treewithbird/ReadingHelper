@@ -54,7 +54,7 @@ const ButtonSet1 = (props) => {
     <div className="button_set">
       <button className="interaction_button">Report</button>
       <button className="interaction_button">{"Watch User"}</button>
-      <button className="interaction_button">Save</button>
+      <button className="interaction_button">Bookmark</button>
       <button className="interaction_button">Share</button>
     </div>
   );
