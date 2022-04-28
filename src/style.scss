@@ -1,5 +1,6 @@
 @import url('https://rsms.me/inter/inter.css');
 html {
+  font-size:16px;
   font-family: 'Inter', sans-serif;
 }
 @supports (font-variation-settings: normal) {
@@ -25,15 +26,15 @@ main {
   flex-direction: row;
   gap: 50px;
   justify-content: center;
+  width: calc(100%-2rem);
 }
 
 .temp_layout2 {
-  min-width: 30%;
-  max-width: 600px;
+  width: 100%;
 }
 
 .temp_layout3 {
-  width: calc(100% - 2rem)
+  width: 100%;
 }
 
 .vstack {
