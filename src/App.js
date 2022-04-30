@@ -51,6 +51,7 @@ export default function App() {
           <br />
         </div>
       ) : null}
+
       <div className="temp_layout3">
         Main feed
         <br />
@@ -59,6 +60,7 @@ export default function App() {
         <br />
         <Feed />
       </div>
+
       {is_horizontal ? (
         <div className="temp_layout2">
           Details

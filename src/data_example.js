@@ -149,6 +149,7 @@ const detaildata = {
   source: "https://writings.stephenwolfram.com/",
 
   display_name: "Wolfram",
+  about: "I am who I am",
   id: "realwolfram",
   watchers: 23,
   contributions: [42],

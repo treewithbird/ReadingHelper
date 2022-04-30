@@ -25,29 +25,28 @@ main {
   display: flex;
   flex-direction: row;
   gap: 50px;
-  justify-content: center;
-  width: calc(100%-2rem);
 }
 
 .temp_layout2 {
-  width: 100%;
+  width: 30vw
 }
 
 .temp_layout3 {
-  width: 100%;
+  width: 100%
 }
 
 .vstack {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 0.6vh;
   width: 100%;
 }
 
 .hstack {
   display: flex;
   flex-direction: row;
-  gap: 5px;
+  flex-grow: 1;
+  gap: 0.6vh;
 }
 
 .vstack_wide {
@@ -57,23 +56,23 @@ main {
 }
 
 .round_border {
-  border-radius: 5px;
+  border-radius: 0.7vh;
 }
 
 .content_description {
-  font: 0.936rem 'Inter';
+  font: 15px 'Inter';
   font-weight: 400;
   color: var(--g1);
 }
 
 .detail_view {
   background: #fff;
-  padding: 5px;
+  padding: 0.7vh;
   tbody {
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 0.624rem;
+    gap: 1.4vh;
   }
   .left {
     text-align: left;
@@ -81,11 +80,11 @@ main {
     width: 7.5rem;
     min-width: 7.5rem;
     max-width: 7.5rem;
-    font: 1rem 'Inter';
+    font: 16px 'Inter';
     font-weight: 500;
   }
   .right {
-    font: 1rem 'Inter';
+    font: 16px 'Inter';
     font-weight: 400;
     line-break: anywhere;
   }
@@ -101,16 +100,16 @@ main {
     display: flex;
   }
   .folded_o {
-    width: 1.25rem;
-    max-width: 1.25rem;
-    min-width: 1.25rem;
+    width: 20px;
+    max-width: 20px;
+    min-width: 20px;
     text-align: center;
-    font: 1rem 'Inter';
-    padding: 5px;
+    font: 16px 'Inter';
+    padding: 0.7vh;
     box-sizing: border-box;
     line-height: 1;
     cursor: default;
-    border-radius: 5px;
+    border-radius: 0.7vh;
     &:hover {
       font-weight: 500;
     }
@@ -144,17 +143,17 @@ main {
 .page_selector {
   display: flex;
   flex-direction: row;
-  gap: 2px;
-  border-radius: 5px;
+  gap: 0.2vh;
+  border-radius: 0.7vh;
   overflow: hidden;
   .l_most {
-    border-radius: 5px 0px 0px 5px;
+    border-radius: 0.7vh 0px 0px 0.7vh;
   }
   .r_most {
-    border-radius: 0px 5px 5px 0px;
+    border-radius: 0px 0.7vh 0.7vh 0px;
   }
   .page_select_button {
-    font: 1rem 'Inter';
+    font: 16px 'Inter';
     width: 100%;
     border: 1px solid #fff;
     color: var(--g1);
@@ -177,17 +176,17 @@ main {
 }
 
 .button_set {
-  font: 1rem 'Inter';
+  font: 16px 'Inter';
   background: transparent;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  gap: 5px;
+  gap: 0.7vh;
   .interaction_button {
     width: 6.25rem;
     border: 1px solid #fff;
     color: var(--g1);
-    border-radius: 5px;
+    border-radius: 0.7vh;
     background: #fff;
     text-align: center;
     &:hover {
@@ -200,7 +199,15 @@ main {
   }
 }
 
+.argument{
+  
+  display: flex;
+  flex-grow: 1;
+}
+
 .opinion {
+  display: flex;
+  flex-grow: 1;
   .hide_me {
     visibility: hidden;
     display: none;
@@ -211,12 +218,12 @@ main {
     display: flex;
   }
   .folded {
-    width: 1.25rem;
-    max-width: 1.25rem;
-    min-width: 1.25rem;
+    width: 20px;
+    max-width: 20px;
+    min-width: 20px;
     text-align: center;
-    font: 1rem 'Inter';
-    padding: 5px;
+    font: 16px 'Inter';
+    padding: 0.7vh;
     box-sizing: border-box;
     line-height: 1;
     cursor: default;
@@ -244,12 +251,12 @@ main {
 .proposition {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 0.7vh;
   //width: 100%;
   flex-grow: 1;
-  padding: 5px;
+  padding: 0.7vh;
   .display_name {
-    font: 0.9rem'Inter';
+    font: 14.5px'Inter';
     font-weight: 600;
     color: #000;
     &:hover {
@@ -257,16 +264,16 @@ main {
     }
   }
   .secondary_txt {
-    font: 0.9rem 'Inter';
+    font: 14.5px 'Inter';
     font-weight: 300;
     color: var(--g1);
   }
   .op5_txt {
-    font: 0.9rem 'Inter';
+    font: 14.5px 'Inter';
     font-weight: 400;
   }
   .id_button {
-    font: 0.9rem 'Inter';
+    font: 14.5px 'Inter';
     font-weight: 300;
     color: var(--g1);
     &:hover {
@@ -274,7 +281,7 @@ main {
     }
   }
   .watching{
-    font: 0.9rem 'Inter';
+    font: 14.5px 'Inter';
     font-weight: 500;
     color: var(--i1);
   }
@@ -285,50 +292,70 @@ main {
     }
   }
   .primary_txt {
-    font: 1rem 'Inter';
+    font: 16px 'Inter';
     font-weight: 400;
     color: #000;
   }
   .info {
     line-height: 1;
-    display: flex;
-    flex-direction: row;
-    gap: 0.1875rem;
-    justify-content: space-between;
+    gap: 0.7vh;
   }
   .info_1{
     white-space: nowrap;
   }
   .info_2{
     white-space: nowrap;
+    float: right;
+  }
+  .info_3{
+    white-space: nowrap;
+  }
+  .opinion_adder_info {
+    line-height: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 0.7vh;
+    justify-content: space-between;
+    white-space:normal;
   }
   .expand_area {
     padding: 2px;
     margin: -2px;
-    border-radius: 5px;
+    border-radius: 0.7vh;
   }
-  .write_src_here {
+  .write_tag_here {
     border: solid 1px var(--g3);
-    border-radius: 5px;
-    font: 0.9rem 'Inter';
+    border-radius: 0.7vh;
+    font: 14.5px 'Inter';
     font-weight: 400;
-    padding: 0px 0px 0px 5px;
+    padding: 0px 0px 0px 0.7vh;
     color: var(--g1);
     display: flex;
     flex-grow: 1;
     min-width: 0rem;
   }
+  .write_src_here {
+    border: solid 1px var(--g3);
+    border-radius: 0.7vh;
+    font: 14.5px 'Inter';
+    font-weight: 400;
+    padding: 0px 0px 0px 0.7vh;
+    color: var(--g1);
+    display: flex;
+    min-width: 0rem;
+    width: 25%;
+  }
   .write_prop_here {
     border: solid 1px var(--g2);
-    border-radius: 5px;
-    font: 1rem 'Inter';
+    border-radius: 0.7vh;
+    font: 16px 'Inter';
     font-weight: 400;
-    padding: 0px 5px 0px 5px;
+    padding: 0px 0.7vh 0px 0.7vh;
     display: flex;
     flex-grow: 1;
   }
   .t_button {
-    font: 0.9rem 'Inter';
+    font: 14.5px 'Inter';
     font-weight: 400;
     color: var(--t1);
     &:hover {
@@ -336,7 +363,7 @@ main {
     }
   }
   .f_button {
-    font: 0.9rem 'Inter';
+    font: 14.5px 'Inter';
     font-weight: 400;
     color: var(--f1);
     &:hover {
@@ -344,7 +371,7 @@ main {
     }
   }
   .b_button {
-    font: 0.9rem 'Inter';
+    font: 14.5px 'Inter';
     font-weight: 400;
     color: var(--b1);
     &:hover {
@@ -380,11 +407,11 @@ main {
     z-index: 1;
     background-color: #fff;
     border: solid 1px var(--g2);
-    border-radius: 5px;;
+    border-radius: 0.7vh;
     padding: 4px;
     display: none;
     visibility: hidden;
-    font: 0.9rem 'Inter';
+    font: 14.5px 'Inter';
     line-height: 1;
     font-weight: 400;
   }
@@ -396,7 +423,7 @@ main {
   }
   .position_1 {
     bottom: -170%;
-    right: -5px;;
+    right: -0.7vh;;
   }
 }
 
@@ -413,8 +440,8 @@ body {
   --t3: #d1e5ff;
   --t4: #e7f0fd;
 
-  --f1: #ff0f5b;
-  --f2: #ff8aaf;
+  --f1: #eb0046;
+  --f2: #ff8eb1;
   --f3: #ffc7e3;
   --f4: #ffe5f2;
 

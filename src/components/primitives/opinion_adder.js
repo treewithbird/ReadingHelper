@@ -36,14 +36,19 @@ const PropositionMaker = (props) => {
       className="proposition round_border"
       style={{ background: background }}
     >
-      <div className="info">
+      <div className="opinion_adder_info">
+        <input
+          type="text"
+          placeholder="Add tags.."
+          className="write_tag_here"
+        ></input>
         <input
           type="text"
           placeholder="Add source.."
           className="write_src_here"
         ></input>
-        <span>
-          &nbsp;&nbsp;&nbsp;
+        <span className="info_3">
+          &nbsp;&nbsp;
           <span className="secondary_txt">{"Vote ·"}</span>
           &nbsp;{t_button}&nbsp;{f_button}&nbsp;{b_button}
         </span>

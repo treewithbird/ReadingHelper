@@ -5,7 +5,7 @@
   "dependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "sass": "latest"
+    "sass": "1.49.11"
   },
   "scripts": {
     "start": "react-scripts start",

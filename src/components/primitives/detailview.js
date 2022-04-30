@@ -129,6 +129,10 @@ const DetailView3 = (props) => {
             <td className="right">{props.data.display_name}</td>
           </tr>
           <tr className="pair">
+            <th className="left">About</th>
+            <td className="right">{props.data.about}</td>
+          </tr>
+          <tr className="pair">
             <th className="left">ID</th>
             <td className="right">{props.data.id}</td>
           </tr>

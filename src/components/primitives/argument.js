@@ -85,7 +85,7 @@ const Proposition = (props) => {
           className="watching"
           title={`${data.watch} watchers including you.`}
         >
-          {"(" + data.watch + ")"}
+          {"!!!"}
         </button>
       </>
     );
@@ -156,9 +156,9 @@ const Proposition = (props) => {
             <span className="secondary_txt">{"Vote ·"}</span>
             &nbsp;{t_button}&nbsp;{f_button}&nbsp;{b_button}
             <span className="tool_tip position_1">
-              {"True:"}
-              {t_button}&nbsp;&nbsp;{"False:"}
-              {f_button}&nbsp;&nbsp;{"Bad:"}
+              {"True: "}
+              {t_button}&nbsp;&nbsp;{"False: "}
+              {f_button}&nbsp;&nbsp;{"Bad: "}
               {b_button}
             </span>
           </span>
@@ -229,7 +229,7 @@ const Opinion = (props) => {
 
 const Argument = (props) => {
   return (
-    <div className="vstack">
+    <div className="argument vstack">
       {props.data.thesis === undefined ? null : (
         <Proposition data={props.data.thesis} bg="#fff" />
       )}
