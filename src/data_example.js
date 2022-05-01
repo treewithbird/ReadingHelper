@@ -69,6 +69,20 @@ const propdata_raw_l2 = {
   }
 };
 
+const propdata_raw_l3 = {
+  display_name: "Wolfram",
+  watch: undefined,
+  creator_vote: 2,
+  post_id: "000004",
+  post_date: "4m ago",
+  tfb: [56, 21, 9],
+  voted: [false, false, false],
+  content: {
+    sentence: undefined,
+    connects: ["000001", "000002", 2]
+  }
+};
+
 const opiniondata_raw1 = {
   lhs: propdata_raw_l1,
   rhs: propdata_raw_r1,
@@ -105,15 +119,15 @@ const opiniondata_raw5 = {
 };
 
 const opiniondata_raw6 = {
-  lhs: propdata_raw_l2,
+  lhs: propdata_raw_l3,
   rhs: propdata_raw_r3,
-  opinions_l: [opiniondata_raw2, opiniondata_raw4],
-  opinions_r: []
+  opinions_l: [],
+  opinions_r: [opiniondata_raw2]
 };
 
 const data_argument = {
   thesis: propdata_raw_r1,
-  opinions: [opiniondata_raw1, opiniondata_raw5]
+  opinions: [opiniondata_raw1, opiniondata_raw6, opiniondata_raw5]
 };
 
 const data_prop1 = {

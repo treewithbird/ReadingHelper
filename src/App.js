@@ -23,7 +23,7 @@ export default function App() {
   return (
     <div className="temp_layout">
       {is_horizontal ? (
-        <div className="temp_layout2">
+        <div className="temp_layout1">
           <div>Logo....Sign in/Sign up</div>
           <br />
           <br />
@@ -52,7 +52,7 @@ export default function App() {
         </div>
       ) : null}
 
-      <div className="temp_layout3">
+      <div className="temp_layout2">
         Main feed
         <br />
         <br />
@@ -62,7 +62,7 @@ export default function App() {
       </div>
 
       {is_horizontal ? (
-        <div className="temp_layout2">
+        <div className="temp_layout3">
           Details
           <br />
           <br />

@@ -139,7 +139,6 @@ const DetailView3 = (props) => {
           <tr className="pair">
             <th className="left">Watchers</th>
             <td className="right">
-              {"👀"}
               <Itxt t={props.data.watchers} />
             </td>
           </tr>

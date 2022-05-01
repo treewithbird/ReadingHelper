@@ -70,8 +70,8 @@ const Proposition = (props) => {
     highlight[x] = !highlight[x];
     set_highlight(highlight);
     for (let i = 0; i < elements.length; i++) {
-      elements[i].style.border = highlight[x] ? "1px solid var(--i1)" : "none";
-      elements[i].style.padding = highlight[x] ? "4px" : "5px";
+      elements[i].style.border = highlight[x] ? "3px solid var(--i1)" : "none";
+      elements[i].style.padding = highlight[x] ? "2px" : "5px";
     }
   };
 
